@@ -5,29 +5,29 @@
 ---
 
 ## 1. Problem Statement
-Air pollution transcends municipal and national borders, yet environmental governance remains fragmented. Traditional monitoring relies on isolated ground stations with severe spatial coverage gaps, delayed reporting, and siloed data formats. Transboundary industrial plumes and seasonal fires routinely cross jurisdictions without coordinated early-warning mechanisms, while citizen reports lack automated corroboration and cross-border data sharing faces strict sovereignty and privacy barriers.
+Air pollution transcends municipal and national borders, yet environmental governance remains fragmented. Traditional monitoring relies on isolated ground stations with spatial coverage gaps and delayed reporting. Transboundary industrial plumes and seasonal fires cross jurisdictions without standardized early-warning protocols, while citizen reports lack automated corroboration and cross-border environmental data sharing faces strict sovereignty and privacy constraints.
 
 ## 2. Solution
-VAYU-SETU AI ("Air Bridge") is a federated climate intelligence platform that unites ground monitoring stations, satellite observations, meteorological forecasts, and citizen reports into a unified operational command system. By combining multi-source evidence fusion with privacy-preserving transboundary federation schemas, VAYU-SETU enables municipal and regional authorities to detect emerging pollution anomalies, forecast atmospheric dispersion, and coordinate mitigation actions across borders without compromising citizen privacy or national data sovereignty.
+VAYU-SETU AI ("Air Bridge") is a federated climate intelligence prototype that brings together ground monitoring stations, satellite observations, meteorology, and citizen reports into a coordinated operational command interface. By combining deterministic multi-source evidence fusion with a privacy-preserving transboundary federation architecture, VAYU-SETU demonstrates how regional authorities can detect emerging pollution anomalies, track directional transport, and coordinate mitigation actions across borders without compromising citizen privacy or national data sovereignty.
 
 ## 3. Key Features
-- **Real-Time Operational Overview**: High-level KPIs, network status, active incident tracking (`VS-E001`), and critical hotspot alerts (`VS-Z07`).
-- **Interactive Live Map**: Geospatial visualization across 12 monitoring zones with ground telemetry, satellite fire detection overlays, and real-time wind vector plumes.
-- **Multi-Source Evidence Fusion**: Deterministic corroboration combining ground sensors (35%), satellite observations (25%), citizen reports (20%), and meteorological consistency (20%) into a weighted confidence index.
-- **Multi-Horizon Atmospheric Dispersion Forecasting**: 24h, 48h, and 72h plume trajectory modeling based on meteorological wind vectors and atmospheric boundary-layer dynamics.
-- **Population & Asset Exposure Intelligence**: Quantitative downwind impact assessments covering vulnerable demographics, healthcare facilities, schools, and transportation corridors.
-- **Authority Command Centre**: Structured emergency dispatch workflows with operational intervention playbooks, inter-agency assignments, and local alert lifecycle management (Acknowledge, Escalate, Resolve).
-- **BRICS Transboundary Federation (Simulated Demo)**: Sovereign node registry (India Active Prototype, Brazil, Russia, China, South Africa simulated) demonstrating privacy-scrubbed cross-border incident exchange.
-- **Citizen Environmental Reporting & AI Visual Verification**: Structured citizen reporting with server-side multimodal visual corroboration.
+- **Real-Time Operational Overview**: High-level KPIs, network operational status, synthetic active incident tracking (`VS-E001`), and critical hotspot monitoring (`VS-Z07`).
+- **Interactive Live Map**: Geospatial visualization across 12 monitoring zones using deterministic synthetic monitoring-zone data, satellite overlays, and a simplified wind-based demo plume (not an atmospheric dispersion model).
+- **Multi-Source Evidence Fusion**: Deterministic corroboration combining ground sensors, satellite observations, meteorology, citizen reports, and AI image analysis into a Prototype Evidence Confidence score.
+- **Multi-Horizon Scenario Forecast**: Deterministic synthetic 24h, 48h, and 72h prototype forecast logic illustrating forward air quality trends and risk tiers.
+- **Population & Asset Exposure Intelligence**: Synthetic demo estimates of downwind population and critical infrastructure counts for operational simulation (not official public-health guidance).
+- **Authority Command Centre**: Structured operational response interface with prioritized intervention recommendations, agency assignments, and local alert lifecycle management (Acknowledge, Escalate, Resolve).
+- **Simulated BRICS Transboundary Federation**: Simulated demo showing sovereign node coordination (India active prototype node; Brazil, Russia, China, South Africa simulated) demonstrating privacy-scrubbed regional data exchange without citizen PII.
+- **Citizen Environmental Reporting & AI Visual Verification**: Citizen reporting workflow supporting real user-uploaded photographs evaluated for visual features via server-side Gemini Vision.
 
 ## 4. Architecture
-VAYU-SETU AI is built on a unified full-stack architecture running Node.js / Express with Vite middleware in development and a compiled CommonJS server serving static client bundles in production:
+VAYU-SETU AI is implemented as a full-stack web application with a React SPA client, an Express server handling API routing and static asset serving, and server-side integration with the Google Gemini API:
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │                        React SPA Client (Vite + TS)                    │
 │  - Shell Navigation       - LiveMap Geospatial     - Hotspots Fusion   │
-│  - Command Centre View    - Forecast Trajectory    - BRICS Federation  │
+│  - Command Centre View    - Forecast Prototype     - Simulated BRICS   │
 └───────────────────────────────────┬────────────────────────────────────┘
                                     │ Relative /api HTTP Calls
                                     ▼
@@ -39,56 +39,78 @@ VAYU-SETU AI is built on a unified full-stack architecture running Node.js / Exp
                     │                                │
                     ▼                                ▼
 ┌───────────────────────────────────┐    ┌───────────────────────────────┐
+                    │                                │
+┌───────────────────┴───────────────┐    ┌───────────┴───────────────────┐
 │     @google/genai SDK Proxy       │    │     Synthetic Engine Data     │
 │   (Server-Side API Key Only)      │    │  (12 Zones, Canonical Event, │
-│  - Visual Image Feature Detection │    │   Deterministic Telemetry)    │
+│  - Qualitative Image Analysis     │    │   Deterministic Telemetry)    │
 └───────────────────────────────────┘    └───────────────────────────────┘
 ```
 
 ## 5. End-to-End Data Flow & Information Taxonomy
 
-To ensure scientific integrity and operational trust, VAYU-SETU explicitly categorizes all platform data:
+To ensure scientific transparency, VAYU-SETU explicitly categorizes all platform information:
 
 | Taxonomy Category | Data Source & Flow | Representation in VAYU-SETU |
 | :--- | :--- | :--- |
-| **Observed Telemetry** | Fixed continuous ambient air quality monitoring stations (CAAQMS) | Calibrated microgram concentrations (PM2.5, PM10, NO2, SO2, CO, O3) and weather readings |
-| **Citizen-Reported Data** | Citizen observation submissions via structured reporting interface | Unverified reports, observed odor/plume types, and uploaded scene photographs |
-| **AI-Inferred Analysis** | Backend Gemini Vision model via `@google/genai` | Qualitative visual descriptors (plume type, density, visible ignition) and visual interpretation confidence |
-| **Predicted Forecasts** | Atmospheric dispersion trajectory modeling | 24h/48h/72h forward dispersion horizons and downwind population exposure estimates |
-| **Simulated Federation** | Synthetic cross-border node exchange | Coarse regional airshed payloads shared between simulated BRICS member nodes |
+| **Synthetic Monitoring Telemetry** | Pre-configured monitoring zone definitions | Deterministic synthetic sensor values (PM2.5, PM10, NO2, SO2, CO, O3) across 12 zones |
+| **Real User-Uploaded Images** | User submissions via citizen reporting interface | User-provided photos submitted in real time for qualitative visual inspection |
+| **AI Visual Interpretation** | Backend Gemini Vision model via `@google/genai` | Qualitative visual descriptors (smoke density, plume type, visible flame) and visual confidence score |
+| **Simplified Plume & Forecast** | Synthetic prototype logic and wind-vector offsets | Simplified wind-based demo plume and deterministic synthetic 24/48/72h forecast horizons |
+| **Synthetic Exposure Estimates** | Synthetic demographic model linked to incident zone | Demo counts of downwind population and facilities (not clinical or public-health guidance) |
+| **Simulated Federation** | Synthetic cross-border node exchange | Coarse regional airshed records exchanged between simulated BRICS member nodes |
 
 ## 6. Gemini's Role & Strict Safety Boundaries
-- **Qualitative Visual Assessment Only**: Gemini is utilized exclusively on the server side (`/api/analyze-image`) to extract qualitative features from citizen-submitted photographs (e.g., detecting visible black smoke, open field burning, or industrial stack emissions).
-- **No Numerical Generation**: Gemini **never** invents, hallucinates, or generates numerical pollutant concentrations (e.g., PM2.5 in µg/m³) or atmospheric dispersion forecasts. All quantitative values are derived strictly from calibrated telemetry sensors and atmospheric physics models.
-- **Visual Confidence vs. Event Probability**: Gemini's `visualConfidence` score indicates only how clearly visible features match visual categories in the photograph. It is **never** presented as an environmental violation probability or ground-truth pollution measurement.
+- **Visual Interpretation Only**: Gemini is used exclusively on the server side (`/api/analyze-image`) to extract qualitative visual features from user-uploaded images (e.g., identifying dark smoke plumes, visible flames, or industrial chimney emissions).
+- **Does NOT Verify Pollution**: Gemini provides visual interpretation only; it does **not** verify ground-truth pollution, confirm legal violations, or replace official environmental inspections.
+- **Does NOT Generate Pollutant Measurements or Forecasts**: Gemini **never** generates numerical pollutant concentrations (e.g., PM2.5 in µg/m³) or atmospheric dispersion forecasts. All quantitative values displayed in the app are deterministic prototype data.
+- **Prototype Evidence Confidence vs. Probability**: Gemini's `visualConfidence` score reflects how clearly visual features match recognized visual categories in the submitted image. It is **never** presented as an environmental violation probability or ground-truth event probability.
 
 ## 7. Evidence Fusion Methodology
-Rather than relying on single-point sensors or unverified citizen reports, VAYU-SETU calculates an Evidence Fusion Score:
+VAYU-SETU corroborates multi-source observations using a deterministic Evidence Fusion algorithm:
 
-$$\text{Fusion Score} = w_{\text{sensor}} \cdot S_{\text{sensor}} + w_{\text{sat}} \cdot S_{\text{sat}} + w_{\text{citizen}} \cdot S_{\text{citizen}} + w_{\text{met}} \cdot S_{\text{met}}$$
+### Evidence Source Weights
+- **Citizen Reports ($w = 0.10$)**: 10%
+- **AI Image Interpretation ($w = 0.15$)**: 15%
+- **Ground Sensor Telemetry ($w = 0.30$)**: 30%
+- **Satellite Observations ($w = 0.25$)**: 25%
+- **Meteorological Consistency ($w = 0.20$)**: 20%
 
-- **Ground Sensors ($w = 0.35$)**: Multi-pollutant threshold exceedance ($> 200\ \mu\text{g/m}^3\ \text{PM2.5}$).
-- **Satellite Detections ($w = 0.25$)**: Optical depth and thermal anomaly confirmation (e.g., Sentinel-5P / INSAT-3DR).
-- **Citizen Reports ($w = 0.20$)**: Clustered, corroborated citizen reports in the affected grid within 6 hours.
-- **Meteorological Consistency ($w = 0.20$)**: Stability index, wind alignment, and temperature inversion trapping.
+### Scoring Formulation
+For each available evidence source, an individual source score is computed from quality, cross-source agreement, and observation freshness:
 
-A composite score above 75% triggers an automated **HIGH CORROBORATION** classification, escalating the incident to the Command Centre.
+$$\text{sourceScore} = \text{quality} \times 0.4 + \text{agreement} \times 0.4 + \text{freshness} \times 0.2$$
 
-## 8. BRICS Federation & Privacy-Preserving Model
-The cross-border federation architecture is designed for transboundary airshed governance without privacy or sovereignty compromises:
-- **Zero Citizen PII**: Citizen identities, phone numbers, free-text remarks, personal coordinates, and uploaded photos are **never** shared across borders or federated.
-- **Aggregated Airshed Envelopes**: Federation packets contain only high-level regional boundaries (e.g., "Central Industrial Belt Airshed"), composite severity tiers, dominant chemical species, and downwind dispersion vectors.
-- **Sovereign Node Governance**: Each member state retains complete data custody. Nodes exchange standardized, cryptographically signed JSON telemetry summaries.
-- **Simulated Prototype Disclosure**: In this release, the India node functions as the active prototype, while Brazil, Russia, China, and South Africa nodes are **simulated for demonstration purposes**.
+The composite score is the weighted average across all currently available sources:
+
+$$\text{Final Score} = \frac{\sum_{\text{available}} (\text{sourceScore}_i \times w_i)}{\sum_{\text{available}} w_i}$$
+
+### Confidence Thresholds
+- **Insufficient Evidence**: Fewer than 2 independent evidence sources available.
+- **Low**: Score $< 0.30$
+- **Moderate**: Score $< 0.60$
+- **High**: Score $\ge 0.60$
+
+*Note: This metric represents **Prototype Evidence Confidence** (concordance across available data streams) for prototype demonstration, and is **not** a statistical pollution probability.*
+
+## 8. BRICS Federation & Privacy Model
+The transboundary federation architecture demonstrates cross-border environmental intelligence sharing with strict privacy guarantees:
+- **Simulated Federation Network**: The BRICS federation network is **simulated for demonstration**. India serves as the active prototype node, while Brazil, Russia, China, and South Africa nodes are simulated endpoints.
+- **Zero Citizen PII**: Citizen names, phone numbers, contact details, free-text remarks, personal GPS coordinates, and uploaded photos are **never** shared across borders or included in federation payloads.
+- **Coarse Regional Airshed Envelopes**: Shared records contain only coarse regional summaries (e.g., "Central Industrial Belt Airshed"), aggregate severity tiers, primary chemical species, and general downwind transport direction.
+- **Sovereign Node Governance**: Each member state retains complete custody of local raw sensor streams, citizen submissions, and municipal records.
 
 ## 9. Synthetic & Demo Data Disclosure
-All sensor readings, monitoring zone coordinates, citizen submissions, satellite detection overlays, and multinational federation events displayed in the user interface are **synthetic demo data** calibrated to realistic atmospheric thresholds. They are designed to showcase operational coordination workflows and do not reflect real-time active environmental hazards.
+- **Synthetic Monitoring & Scenarios**: All 12 monitoring zones, sensor metrics, satellite detection overlays, 24/48/72h forecast horizons, and cross-border scenario events (`VS-E001` at `VS-Z07`) are **deterministic synthetic demo data**.
+- **Real User Inputs**: Real inputs are limited to user-uploaded images and form fields submitted through the Citizen Report interface during active sessions.
+- **Plume Visualization**: The map plume display is a **simplified wind-based demo**, not an atmospheric dispersion model.
+- **Exposure Estimates**: Population and facility exposure figures are **synthetic demo estimates** for scenario exploration, not verified public-health guidance.
 
 ## 10. Tech Stack
 - **Frontend**: React 19, TypeScript, Tailwind CSS, Lucide Icons, Vite
-- **Backend**: Node.js, Express, tsx, esbuild
+- **Backend**: Node.js, Express, esbuild
 - **AI / Multimodal**: Google Gemini API via `@google/genai` (server-side proxy with fallback ladder)
-- **Deployment**: Google Cloud Run, Secret Manager, Cloud Firestore
+- **Deployment**: Google Cloud Run, Secret Manager
 
 ---
 
@@ -99,7 +121,7 @@ Define the following environment variables in `.env` (or pass via Cloud Run / Se
 | Variable | Required | Description |
 | :--- | :--- | :--- |
 | `GEMINI_API_KEY` | Optional / Recommended | Google Gemini API key for server-side visual image corroboration |
-| `PORT` | Optional | HTTP port for the Express server (defaults to `3000`; Cloud Run supplies dynamic port) |
+| `PORT` | Optional | HTTP port for the Express server (defaults to `3000`; dynamically assigned on Cloud Run) |
 | `NODE_ENV` | Optional | Set to `production` in production deployment |
 
 *(See `.env.example` for variable declarations).*
@@ -112,7 +134,7 @@ Define the following environment variables in `.env` (or pass via Cloud Run / Se
 # 1. Install dependencies
 npm install
 
-# 2. Configure environment (optional: add GEMINI_API_KEY for real AI image analysis)
+# 2. Configure environment (optional: add GEMINI_API_KEY for live AI image analysis)
 cp .env.example .env
 
 # 3. Start unified full-stack dev server (Vite + Express on port 3000)
@@ -130,7 +152,7 @@ npm start
 
 ---
 
-## 13. Cloud Run Deployment & Security Configuration
+## 13. Cloud Run Deployment
 
 ### Prerequisites
 ```bash
@@ -142,7 +164,6 @@ gcloud config set project YOUR_PROJECT_ID
 gcloud services enable \
   run.googleapis.com \
   secretmanager.googleapis.com \
-  firestore.googleapis.com \
   cloudbuild.googleapis.com
 ```
 
@@ -158,19 +179,6 @@ gcloud secrets add-iam-policy-binding GEMINI_API_KEY \
   --role="roles/secretmanager.secretAccessor"
 ```
 
-### Database Security Configuration (Cloud Firestore)
-When persisting user accounts or report interactions, enforce user-bound isolation in `firestore.rules`:
-```javascript
-rules_version = '2';
-service cloud.firestore {
-  match /databases/{database}/documents {
-    match /users/{userId}/interactions/{interactionId} {
-      allow read, write: if request.auth != null && request.auth.uid == userId;
-    }
-  }
-}
-```
-
 ### Cloud Run Deployment Command
 ```bash
 # Deploy container to Cloud Run
@@ -183,9 +191,9 @@ gcloud run deploy vayu-setu-ai \
   --set-secrets="GEMINI_API_KEY=GEMINI_API_KEY:latest"
 ```
 
-### Mandatory Verification Labeling
+### Verification Labeling
 ```bash
-# Apply campaign tracking label for automated challenge verification
+# Apply challenge verification label
 gcloud run services update vayu-setu-ai \
   --update-labels=dev-tutorial=cloud-run-ai-challenge \
   --region=asia-east1
@@ -194,13 +202,16 @@ gcloud run services update vayu-setu-ai \
 ---
 
 ## 14. Current MVP Limitations
-1. **Synthetic Telemetry Baseline**: Current monitoring stations and regional airshed readings are pre-calibrated synthetic models rather than live IoT feeds.
-2. **Simulated Node Network**: Foreign BRICS nodes operate on deterministic simulation engines rather than live inter-governmental REST/gRPC gateways.
-3. **Plume Dispersion Geometry**: Trajectory plumes use analytical Gaussian dispersion approximations rather than high-order numerical Weather Research and Forecasting with Chemistry (WRF-Chem) supercomputer models.
-4. **Local Alert Dispatch State**: Alert status changes (Acknowledge, Escalate, Resolve) persist in the local operational session.
+1. **Deterministic Synthetic Baseline**: Monitoring stations, baseline telemetry, and regional airshed readings are deterministic synthetic models rather than live sensor feeds.
+2. **Simplified Plume Demonstration**: The plume layer is a simplified wind-direction geometric overlay, not a numerical atmospheric dispersion model.
+3. **Prototype Forecast Logic**: The 24h, 48h, and 72h forecasts use deterministic synthetic projection logic rather than numerical weather prediction or chemical transport simulation.
+4. **Synthetic Exposure Assessments**: Downwind population and infrastructure counts are synthetic estimates designed to demonstrate decision-support workflows, not calibrated epidemiological or public-health guidance.
+5. **Simulated BRICS Federation**: Foreign nodes operate on a simulated exchange engine rather than live inter-governmental networks.
+6. **Local Alert Dispatch State**: Incident lifecycle actions (Acknowledge, Escalate, Resolve) persist in the local operational browser session.
 
 ## 15. Future Roadmap
-- **Live CAAQMS / CPCB IoT Integration**: Real-time MQTT/REST ingestion from national central pollution control board sensor grids.
-- **Direct Sentinel-5P Level 2 Data Pipeline**: Automated daily satellite swath processing via Google Earth Engine.
-- **Secure Multi-Party Computation (SMPC)**: Cryptographic differential privacy and zero-knowledge proofs for transboundary chemical transport attribution.
-- **Mobile Citizen Progressive Web App (PWA)**: Offline-first localized push notifications for vulnerable populations in downwind dispersion zones.
+- **Live CAAQMS / Sensor Grid Ingestion**: Standardized MQTT/REST connectors for live environmental station feeds.
+- **Satellite Data Ingestion**: Automated ingestion of daily atmospheric composition products (e.g., Sentinel-5P).
+- **Advanced Dispersion Modeling**: Integration with validated atmospheric dispersion engines for complex terrain and weather dynamics.
+- **Federated Node Network**: Inter-agency API protocols for authenticated, distributed cross-border airshed intelligence exchange.
+- **Mobile Citizen App**: Lightweight offline-first citizen reporting with local exposure advisories.
