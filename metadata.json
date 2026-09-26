@@ -1,0 +1,6 @@
+{
+  "name": "VAYU-SETU AI",
+  "description": "Federated Air & Climate Intelligence for BRICS",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
